@@ -5,6 +5,12 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <IsPublishable>False</IsPublishable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+  </ItemGroup>
 
 </Project>

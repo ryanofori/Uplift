@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Uplift
 {
@@ -22,7 +9,25 @@ namespace Uplift
     {
         public MainWindow()
         {
-            InitializeComponent();
+            // Opens application
+            // Set up message box
+            string messageBoxText = "Have a great day!";
+            string caption = "Message";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.None;
+            MessageBoxResult result;
+
+            // Shows message box
+            result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
+
+            switch (result)
+            {
+                // When OK is pressed
+                case MessageBoxResult.OK:
+                    //close application
+                    Close();
+                    break;
+            }
         }
     }
 }
